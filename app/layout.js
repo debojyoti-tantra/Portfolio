@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from "@clerk/nextjs";
 import Footer from "@/components/Footer";
-
+ 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
