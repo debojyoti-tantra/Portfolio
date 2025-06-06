@@ -1,16 +1,6 @@
+import PythonLibrariesComments from "@/components/PythonLibrariesComments";
 import { PythonLibraroesSidebar } from "@/components/PythonLibraroesSidebar";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
 
 export const metadata = {
     title: "Pyhton Libraries",
@@ -19,18 +9,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" suppressHydrationWarning>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
-                    <div className="bg-violet-100 dark:bg-slate-900">
-                <SidebarProvider>
-                    <PythonLibraroesSidebar />
-                        <SidebarTrigger />
-                        {children}
-                </SidebarProvider>
-                    </div>
-            </body>
-        </html>
+        <div className="bg-violet-100 dark:bg-slate-900">
+            <SidebarProvider>
+                <PythonLibraroesSidebar />
+                {/* <SidebarTrigger /> */}
+                <div className="flex flex-col">
+                    {children}
+                    <PythonLibrariesComments />
+                </div>
+            </SidebarProvider>
+        </div>
     );
 }
