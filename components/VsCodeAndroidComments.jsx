@@ -28,6 +28,7 @@ const VsCodeAndroidComments = () => {
             if (data.success) {
                 toast.success(data.message);
                 setComment("");
+                fetchComments();
             }
 
         } catch (error) {
