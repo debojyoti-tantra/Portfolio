@@ -103,7 +103,7 @@ const page = () => {
 
             {/* Contact Information */}
             <div className="p-6 space-y-6 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md">
-               <h2 className="text-xl font-semibold">Our Information</h2>
+               <h2 className="text-xl font-semibold">Contact Information</h2>
                <div>
                   <h3 className="text-gray-900 dark:text-gray-100 font-medium">Email</h3>
                   <p className="text-gray-800 dark:text-gray-200">debojyotitantra@gmail.com</p>

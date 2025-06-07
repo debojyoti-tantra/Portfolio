@@ -11,7 +11,7 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-semibold mb-4">About This Site</h2>
           <p className="text-sm text-gray-300 leading-relaxed">
-            Built with <span className="text-purple-400 font-medium">Next.js</span> and <span className="text-purple-400 font-medium">Tailwind CSS</span>, this site is my portfolio site. Designed and developed by Debojyoti Tantra.
+            Built with <span className="text-purple-400 font-medium">Next.js</span> and <span className="text-purple-400 font-medium">Tailwind CSS</span>, this site is my portfolio website. Designed and developed by Debojyoti Tantra.
           </p>
         </div>
 
@@ -32,7 +32,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://x.com/debojyotitantra" className="flex items-center gap-2 hover:text-purple-400 transition">
+              <Link href="https://x.com/debojyotitantra" className="flex items-center gap-2 hover:text-purple-400 transition underline">
                 <TwitterIcon size={20} />
                 Twitter
               </Link>
@@ -45,13 +45,13 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4">Quick Links</h2>
           <ul className="space-y-2">
             <li>
-              <Link href="/projects" className="hover:text-purple-400 transition">Projects</Link>
+              <Link href="/projects" className="hover:text-purple-400 transition underline">Projects</Link>
             </li>
             <li>
-              <Link href="/blog" className="hover:text-purple-400 transition">Blog</Link>
+              <Link href="/blog" className="hover:text-purple-400 transition underline">Blog</Link>
             </li>
             <li>
-              <Link href="/contact" className="hover:text-purple-400 transition">Contact</Link>
+              <Link href="/contact" className="hover:text-purple-400 transition underline">Contact</Link>
             </li>
           </ul>
         </div>

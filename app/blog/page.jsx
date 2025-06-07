@@ -11,7 +11,7 @@ const blogs = [
    {
       title: "Install VS Code in Android",
       date: "December 15,2024",
-      desc: "VS Code is one type of Code Editor. It's supports many language like HTML, CSS, JS, Python, JAVA, C, C++ etc. It's not avilable for android divices. But after some configrations we can downlode the visualstudio code editor in android divices. Read this blog and you will undersatnd how can we do this...",
+      desc: "VS Code is one type of Code Editor. It's supports many language like HTML, CSS, JS, Python, JAVA, C, C++ etc. It's not avilable for android divices. But after some configrations we can downlode the Visual Studio code editor in Android divices. Read this blog and you will undersatnd how can we do this...",
       linkHref:  "/blog/vsCodeAndroid"
    },
 ]

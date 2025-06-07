@@ -21,7 +21,7 @@ export default function About() {
             <section className="about-section">
                <h2 className="text-2xl font-bold underline">Who I Am</h2>
                <p className="text-gray-900 dark:text-gray-100">
-                  I am currently pursuing my BSc in Physics, which helps me cultivate analytical thinking and problem-solving skills. Alongside my academic journey, I dedicate my time to mastering web development and exploring new technologies. My portfolio showcases a combination of technical expertise and creative problem-solving.
+                  I am currently pursuing my B.Sc. in Physics, which helps me cultivate analytical thinking and problem-solving skills. Alongside my academic journey, I dedicate my time to mastering full-stack web development and exploring new technologies. My portfolio showcases a combination of technical expertise and creative problem-solving. Check out my projects and Blog sections to see some of my work!
                </p>
             </section>
 

@@ -1,7 +1,30 @@
 import React from 'react';
 import Link from 'next/link';
 
+export const metadata = {
+  title: "Projects: DebojyotiTantra",
+  description: "Projects of Debojyoti Tantra's portfolio website. Discover my skills, projects, and journey in web development and programming.",
+};
+
 const projects = [
+   {
+      name: 'All-in-one-Java',
+      desc: 'This is a Github Repo made by me here everything about Java i given.',
+      link: '',
+      gitlink: 'https://github.com/debojyoti-tantra/All-in-one-Java'
+   }, 
+   {
+      name: 'DebAi-The-AI-Chat-Bot',
+      desc: 'A full-stack AI chat application using Next.js 15, Clerk for authentication, DeepSeek AI for chat completion, and MongoDB for persistent message storage. Designed a responsive and theme-aware interface with Tailwind CSS, PrismJS, and Markdown rendering.',
+      link: 'https://debai.vercel.app',
+      gitlink: 'https://github.com/debojyoti-tantra/DebAi-The-AI-Chat-Bot'
+   },
+   {
+      name: 'Video-calling Web App',
+      desc: 'This is a Video-calling Web App, built with Next.js, ZEGOCLOUD, and Clerk for secure video meetings. It features real-time collaboration, screen sharing, audio/video controls, and authentication. Users can create, join, and manage meetings easily with instant links and notifications.',
+      link: 'https://debo-meet.vercel.app',
+      gitlink: 'https://github.com/debojyoti-tantra/Google-Meet-Clone'
+   },
    {
       name: 'Imagify',
       desc: 'Imagify - Your Personal Cloud for Images 🚀 Imagify is a modern cloud-based image storage platform where you can upload, store, and share your images seamlessly. Built using the MERN stack, it offers a smooth and secure experience for managing your pictures online. Authencation using Clerk.',

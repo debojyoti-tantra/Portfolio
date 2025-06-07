@@ -49,7 +49,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center gap-2 px-5">
         <p className="text-3xl font-bold underline">Projects</p>
-        <p className="">I make Verious Type of projects like Todo List App, Ai Chat App, Music Website, Restaurant Site, Clone of many site</p>
+        <p className="">I create various types of projects like Todo List App, Ai Chat App, Music Website, Restaurant Site, Clones of many sites</p>
         <p className="">I use verious technologies like:</p>
         <ul className="list-decimal grid grid-cols-3 gap-x-7 sm:flex sm:gap-8 sm:flex-row">
           <li>HTML, CSS</li>
@@ -59,7 +59,7 @@ export default function Home() {
           <li>Vite</li>
           <li>nextJS</li>
         </ul>
-        <Link href="/projects" className="text-xl my-1 py-1 px-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-purple-500 flex justify-center items-center h-8 w-fit">Go to the page</Link>
+        <Link href="/projects" className="text-xl my-1 py-1 px-3 bg-gradient-to-r from-purple-500 to-blue-600 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-purple-500 flex justify-center items-center h-8 w-fit">View Projects</Link>
       </div>
 
       <div className="w-[85vw] border dark:border-white border-purple-700 my-5 flex mx-auto"></div>
