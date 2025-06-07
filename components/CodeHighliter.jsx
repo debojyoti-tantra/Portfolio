@@ -27,7 +27,7 @@ const CodeHighlighter = ({ children, lang = "jsx" }) => {
       </pre>
       <button 
         onClick={copyText}
-        className="absolute top-2 right-2 p-1 rounded bg-gray-700 hover:bg-gray-600 transition-colors"
+        className="absolute top-2 right-2 p-1 rounded bg-gray-400 dark:bg-gray-700 hover:bg-gray-500 transition-colors"
         aria-label="Copy code"
       >
         <CopyIcon className="w-4 h-4" />
