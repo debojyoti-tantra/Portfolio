@@ -53,11 +53,11 @@ const PythonLibrariesComments = () => {
     }, [])
 
     return (
-        <div className="m-6">
+        <div className="">
             <h2 className="text-xl font-bold underline">Leave a Comment</h2>
-            <form onSubmit={handleCommentSubmit} className="mt-4">
+            <form onSubmit={handleCommentSubmit} className="mt-4 flex flex-col">
                 <textarea
-                    className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-200"
+                    className=" h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 dark:border-gray-600 dark:bg-slate-800 dark:text-gray-200"
                     placeholder="Write your comment here..."
                     value={comment}
                     onChange={(e) => setComment(e.target.value)}

@@ -2,13 +2,17 @@
 import React from 'react'
 import Link from 'next/link'
 import { SidebarTrigger } from '@/components/ui/sidebar'
+import PythonLibrariesComments from '@/components/PythonLibrariesComments'
 
 const PythonLibraries = () => {
   return (
     <div>
-      <div className="h-[90vh] overflow-y-scroll mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-4 flex justify-center items-center gap-3">
-          <SidebarTrigger />
+      <div className="min-h-[90vh] mx-auto p-6">
+        <h1 className="text-3xl font-bold mb-4 flex flex-col sm:flex-row justify-center items-center gap-3">
+          <div className='flex flex-row gap-1 items-center'>
+            <SidebarTrigger />
+            <p className='text-xl'>Menu</p>
+          </div>
           <p>
             Introduction to Python Libraries
           </p>
@@ -65,7 +69,7 @@ const PythonLibraries = () => {
             </Link>
           </div>
         </div>
-
+        <PythonLibrariesComments />
       </div>
     </div>
   )

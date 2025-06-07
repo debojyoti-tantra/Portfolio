@@ -19,7 +19,7 @@ const CodeHighlighter = ({ children, lang = "jsx" }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative overflow-scroll w-[88vw] sm:w-[78vw]">
       <pre>
         <code className={`language-${lang}`}>
           {children}

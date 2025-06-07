@@ -12,11 +12,7 @@ export default function RootLayout({ children }) {
         <div className="bg-violet-100 dark:bg-slate-900">
             <SidebarProvider>
                 <PythonLibraroesSidebar />
-                {/* <SidebarTrigger /> */}
-                <div className="flex flex-col">
-                    {children}
-                    <PythonLibrariesComments />
-                </div>
+                {children}
             </SidebarProvider>
         </div>
     );
