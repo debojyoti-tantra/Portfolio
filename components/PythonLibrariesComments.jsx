@@ -53,7 +53,7 @@ const PythonLibrariesComments = () => {
     }, [])
 
     return (
-        <div className="">
+        <div className="mt-5">
             <h2 className="text-xl font-bold underline">Leave a Comment</h2>
             <form onSubmit={handleCommentSubmit} className="mt-4 flex flex-col">
                 <textarea

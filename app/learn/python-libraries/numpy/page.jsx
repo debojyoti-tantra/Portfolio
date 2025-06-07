@@ -4,9 +4,13 @@ import Link from 'next/link'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import PythonLibrariesComments from '@/components/PythonLibrariesComments'
 
+export const metadata = {
+    title: "Numpy || Python Libraries",
+    description: "How to use Numpy || Learn Numpy.",
+};
+
 const Numpy = () => {
   return (
-    <div>
        <div className="min-h-[90vh] overflow-y-scroll mx-auto p-6">
           <h1 className="text-3xl font-bold mb-4 flex flex-row justify-center items-center gap-3">
            <div className='flex flex-row gap-1 items-center'>
@@ -292,7 +296,6 @@ print("The solution of the equation is: ", X)`}
           </div>
           <PythonLibrariesComments />
        </div>
-    </div>
   )
 }
 

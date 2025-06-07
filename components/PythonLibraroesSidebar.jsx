@@ -5,14 +5,14 @@ import {
     SidebarGroup,
     SidebarHeader,
 } from "@/components/ui/sidebar"
-import { StarIcon, StarsIcon } from "lucide-react"
+import { StarsIcon } from "lucide-react"
 import Link from "next/link"
 
 export function PythonLibraroesSidebar() {
     return (
         <Sidebar>
             <div className="bg-white dark:bg-slate-950 h-full">
-            <SidebarHeader className="pt-10 mt-5 ml-5 text-xl">Topics</SidebarHeader>
+            <SidebarHeader className="pt-10 mt-5 ml-5 text-2xl underline">Topics</SidebarHeader>
             <SidebarContent className="m-5">
                 <SidebarGroup>
                     <div className="flex flex-row items-center gap-2 hover:underline hover:text-blue-500">
@@ -53,12 +53,6 @@ export function PythonLibraroesSidebar() {
                 <SidebarGroup>
                     <div className="flex flex-row items-center gap-2 hover:underline hover:text-blue-500">
                         <StarsIcon /> <Link href={`/learn/python-libraries/barcode`}>barcode</Link>
-                    </div>
-                </SidebarGroup>
-
-                <SidebarGroup>
-                    <div className="flex flex-row items-center gap-2 hover:underline hover:text-blue-500">
-                        <StarsIcon /> <Link href={`/learn/python-libraries/combo`}>Combo</Link>
                     </div>
                 </SidebarGroup>
 

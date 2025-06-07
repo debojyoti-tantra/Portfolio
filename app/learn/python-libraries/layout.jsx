@@ -1,6 +1,5 @@
-import PythonLibrariesComments from "@/components/PythonLibrariesComments";
 import { PythonLibraroesSidebar } from "@/components/PythonLibraroesSidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 export const metadata = {
     title: "Pyhton Libraries",

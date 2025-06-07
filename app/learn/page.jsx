@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata = {
     title: "Learn: DebojyotiTantra",
     description: "Learn page of Debojyoti Tantra's portfolio website. Discover my skills, projects, and journey in web development and programming.",
-  };
+};
 
 const cards = [
    {

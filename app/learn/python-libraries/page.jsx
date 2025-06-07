@@ -6,7 +6,6 @@ import PythonLibrariesComments from '@/components/PythonLibrariesComments'
 
 const PythonLibraries = () => {
   return (
-    <div>
       <div className="min-h-[90vh] mx-auto p-6">
         <h1 className="text-3xl font-bold mb-4 flex flex-col sm:flex-row justify-center items-center gap-3">
           <div className='flex flex-row gap-1 items-center'>
@@ -71,7 +70,6 @@ const PythonLibraries = () => {
         </div>
         <PythonLibrariesComments />
       </div>
-    </div>
   )
 }
 
