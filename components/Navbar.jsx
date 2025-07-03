@@ -26,9 +26,44 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-slate-200 shadow-md dark:bg-slate-800 flex justify-between items-center py-2 px-4">
-      <Link href={'/'} className="text-base sm:text-xl font-semibold text-purple-700 dark:text-purple-300">
-        &lt;/&gt; Debojyoti Tantra
-      </Link>
+
+      <div className='flex justify-center items-center flex-col sm:flex-row'>
+        <Link href={'/'} className="text-base sm:text-xl font-semibold text-purple-700 dark:text-purple-300">
+          &lt;/&gt; Debojyoti Tantra
+        </Link>
+
+        {/* Navigation links for Small Screens */}
+        <div className='sm:hidden'>
+          <DropdownMenu>
+            <DropdownMenuTrigger className="underline">
+              {
+                pathname.split("/")[1] === "" ? (
+                  <div className='flex justify-center items-center gap-1'>
+                    HOME <ArrowBigDownIcon />
+                  </div>
+                ) : (
+                  <div className='flex justify-center items-center gap-1'>
+                    {pathname.split("/")[1].toUpperCase()} <ArrowBigDownIcon />
+                  </div>
+                )
+              }
+            </DropdownMenuTrigger>
+            <DropdownMenuContent>
+              <DropdownMenuGroup>
+                {
+                  pages.map(({ name, path }) => (
+                    <Link href={path} className='' key={path}>
+                      <DropdownMenuItem>
+                        {name}
+                      </DropdownMenuItem>
+                    </Link>
+                  ))
+                }
+              </DropdownMenuGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </div>
 
       {/* Navigation Links for larger screens */}
       <ul className="hidden sm:flex items-center gap-6 pr-4 font-semibold">
@@ -37,8 +72,8 @@ const Navbar = () => {
             <Link
               href={path}
               className={`hover:underline ${pathname === path
-                  ? "underline text-purple-700 dark:text-purple-300"
-                  : ""
+                ? "underline text-purple-700 dark:text-purple-300"
+                : ""
                 }`}
             >
               {name}
@@ -46,40 +81,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-
-      {/* Navigation links for Small Screens */}
-      <div className='sm:hidden'>
-
-      <DropdownMenu>
-        <DropdownMenuTrigger className="underline">
-          {
-            pathname.split("/")[1] === "" ? (
-              <div className='flex justify-center items-center gap-1'>
-                HOME <ArrowBigDownIcon />
-              </div>
-            ) : (
-              <div className='flex justify-center items-center gap-1'>
-                {pathname.split("/")[1].toUpperCase()} <ArrowBigDownIcon />
-              </div>
-            )
-          }
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuGroup>
-            {
-              pages.map(({ name, path }) => (
-                  <Link href={path} className='' key={path}>
-                <DropdownMenuItem>
-                    {name}
-                </DropdownMenuItem>
-                  </Link>
-              ))
-            }
-          </DropdownMenuGroup>
-        </DropdownMenuContent>
-      </DropdownMenu>
-            </div>
-
 
       <div className='flex justify-center items-center gap-2'>
         <ThemeToggle />
@@ -93,7 +94,7 @@ const Navbar = () => {
           )
         }
         <SignedOut>
-          <div  className="flex justify-center items-center gap-2 flex-col sm:flex-row">
+          <div className="flex justify-center items-center gap-2 flex-col sm:flex-row">
             <Button className='px-2' onClick={openSignIn}>Sign In</Button>
             <Button className='px-2' onClick={openSignUp}>Sign Up</Button>
           </div>
