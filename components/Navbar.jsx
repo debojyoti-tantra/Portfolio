@@ -93,8 +93,10 @@ const Navbar = () => {
           )
         }
         <SignedOut>
-          <Button className='px-2' onClick={openSignIn}>Sign In</Button>
-          <Button className='px-2' onClick={openSignUp}>Sign Up</Button>
+          <div  className="flex justify-center items-center gap-2 flex-col sm:flex-row">
+            <Button className='px-2' onClick={openSignIn}>Sign In</Button>
+            <Button className='px-2' onClick={openSignUp}>Sign Up</Button>
+          </div>
         </SignedOut>
       </div>
     </nav>
