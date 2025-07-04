@@ -1,7 +1,7 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import ThemeToggle from './ThemeToggle'
-import { UserButton, useUser, useClerk, SignedOut, SignedIn } from '@clerk/nextjs'
+import { UserButton, useUser, SignedOut, SignedIn } from '@clerk/nextjs'
 import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from './ui/button';
 import { usePathname, useRouter } from 'next/navigation';
@@ -10,10 +10,8 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem,
 import { ArrowBigDownIcon } from 'lucide-react';
 
 const Navbar = () => {
-  const { openSignIn, openSignUp } = useClerk()
   const { isLoaded, isSignedIn, user } = useUser()
   const pathname = usePathname()
-  const router = useRouter()
 
   const pages = [
     { name: "Home", path: "/" },
@@ -27,7 +25,7 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-slate-200 shadow-md dark:bg-slate-800 flex justify-between items-center py-2 px-4">
 
-      <div className='flex justify-center items-center flex-col sm:flex-row'>
+      {/* <div className='flex justify-center items-center flex-row gap-3'> */}
         <Link href={'/'} className="text-base sm:text-xl font-semibold text-purple-700 dark:text-purple-300">
           &lt;/&gt; Debojyoti Tantra
         </Link>
@@ -63,7 +61,7 @@ const Navbar = () => {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-      </div>
+      {/* </div> */}
 
       {/* Navigation Links for larger screens */}
       <ul className="hidden sm:flex items-center gap-6 pr-4 font-semibold">
@@ -94,10 +92,9 @@ const Navbar = () => {
           )
         }
         <SignedOut>
-          <div className="flex justify-center items-center gap-2 flex-col sm:flex-row">
-            <Button className='px-2' onClick={openSignIn}>Sign In</Button>
-            <Button className='px-2' onClick={openSignUp}>Sign Up</Button>
-          </div>
+          <Link href={`/auth`}>
+            <Button>Sign In</Button>
+          </Link>
         </SignedOut>
       </div>
     </nav>

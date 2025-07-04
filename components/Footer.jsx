@@ -32,7 +32,7 @@ const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="https://x.com/debojyotitantra" className="flex items-center gap-2 hover:text-purple-400 transition underline">
+              <Link href="https://x.com/debojyotitantra" className="flex items-center gap-2 hover:text-purple-400 transition">
                 <TwitterIcon size={20} />
                 Twitter
               </Link>
