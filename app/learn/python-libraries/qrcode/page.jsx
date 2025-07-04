@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import PythonLibrariesComments from '@/components/PythonLibrariesComments'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 export const metadata = {
   title: "QR Code Generator || Python Libraries",
@@ -22,6 +24,19 @@ const QRCodePage = () => {
           QR Code Generator
         </p>
       </h1>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+      <div className="w-full flex justify-between items-center p-3">
+        <Link href={`/learn/python-libraries/matplotlib`}><Button>
+          <ArrowLeft className='pr-1' /> Matplotlib
+        </Button></Link>
+        <Link href={`/learn/python-libraries/pyzbar`}><Button>
+          pyzbar <ArrowRight className='pl-1' />
+        </Button></Link>
+      </div>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
 
       <div>
         <p className="text-2xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Make QR-Code using Python</p>
@@ -46,7 +61,7 @@ const QRCodePage = () => {
         <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">At first we make a simple QR</p>
         <p>Inside a directory, write and run this code:</p>
         <CodeHighlighter lang="python">
-{`import qrcode
+          {`import qrcode
 
 myqr = qrcode.make("https://debojyotitantra.vercel.app")  # making a QR
 myqr.save("myqr.png")  # save the QR`}
@@ -64,7 +79,7 @@ myqr.save("myqr.png")  # save the QR`}
       <div>
         <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Make QR adding custom parameters</p>
         <CodeHighlighter lang="python">
-{`import qrcode
+          {`import qrcode
 
 # Create an instance of the QRCode class
 qr = qrcode.QRCode(
@@ -84,6 +99,17 @@ img.save("myqr.png")`}
         </CodeHighlighter>
         <p>That's how we can create a QRCode with custom parameters.</p>
         <p>Feel free to experiment with the parameters to change the size, error correction, and design.</p>
+      </div>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+      <div className="w-full flex justify-between items-center p-3">
+        <Link href={`/learn/python-libraries/matplotlib`}><Button>
+          <ArrowLeft className='pr-1' /> Matplotlib
+        </Button></Link>
+        <Link href={`/learn/python-libraries/pyzbar`}><Button>
+          pyzbar <ArrowRight className='pl-1' />
+        </Button></Link>
       </div>
 
       <div className="w-full border dark:border-white border-purple-700 my-5"></div>

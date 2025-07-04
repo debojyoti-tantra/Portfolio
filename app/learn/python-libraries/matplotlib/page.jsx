@@ -3,10 +3,12 @@ import CodeHighlighter from '@/components/CodeHighliter'
 import Link from 'next/link'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import PythonLibrariesComments from '@/components/PythonLibrariesComments'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft, ArrowRight } from 'lucide-react'
 
 export const metadata = {
-    title: "Matplotlib || Python Libraries",
-    description: "How to use Matplotlib || Learn Matplotlib.",
+  title: "Matplotlib || Python Libraries",
+  description: "How to use Matplotlib || Learn Matplotlib.",
 };
 
 export default function Matplotlib() {
@@ -19,6 +21,19 @@ export default function Matplotlib() {
         </div>
         <p>Matplotlib</p>
       </h1>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+      <div className="w-full flex justify-between items-center p-3">
+        <Link href={`/learn/python-libraries/scipy`}><Button>
+          <ArrowLeft className='pr-1' /> Scipy
+        </Button></Link>
+        <Link href={`/learn/python-libraries/qrcode`}><Button>
+          qrcode <ArrowRight className='pl-1' />
+        </Button></Link>
+      </div>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
 
       <div>
         <div>
@@ -33,14 +48,14 @@ export default function Matplotlib() {
 
         <div className="w-full border dark:border-white border-purple-700 my-5"></div>
 
-         <div>
-             <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">At First we downlode the library of Matplotlib</p>
-             <CodeHighlighter lang="python">
-                pip install matplotlib
-             </CodeHighlighter>
-          </div>
+        <div>
+          <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">At First we downlode the library of Matplotlib</p>
+          <CodeHighlighter lang="python">
+            pip install matplotlib
+          </CodeHighlighter>
+        </div>
 
-          <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+        <div className="w-full border dark:border-white border-purple-700 my-5"></div>
 
         <div>
           <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Matplotlib Basic Example</p>
@@ -94,6 +109,17 @@ plt.show()`}
         <div>
           <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Conclusion</p>
           <p>Matplotlib is a very versatile plotting library that can be used for a variety of visualizations. It is essential for data visualization in Python and can be customized to meet specific needs, including adding titles, labels, legends, and modifying axes and grid properties.</p>
+        </div>
+
+        <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+        <div className="w-full flex justify-between items-center p-3">
+          <Link href={`/learn/python-libraries/scipy`}><Button>
+            <ArrowLeft className='pr-1' /> Scipy
+          </Button></Link>
+          <Link href={`/learn/python-libraries/qrcode`}><Button>
+            qrcode <ArrowRight className='pl-1' />
+          </Button></Link>
         </div>
 
         <div className="w-full border dark:border-white border-purple-700 my-5"></div>

@@ -4,6 +4,8 @@ import Link from 'next/link'
 import { SidebarTrigger } from '@/components/ui/sidebar'
 import PythonLibrariesComments from '@/components/PythonLibrariesComments'
 import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import { ArrowLeft } from 'lucide-react'
 
 export const metadata = {
   title: "Barcode Generator || Python Libraries",
@@ -20,6 +22,16 @@ const BarcodePage = () => {
         </div>
         <p>Barcode Generator</p>
       </h1>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+      <div className="w-full flex justify-start items-center p-3">
+        <Link href={`/learn/python-libraries/pyzbar`}><Button>
+          <ArrowLeft className='pr-1' /> pyzbar
+        </Button></Link>
+      </div>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
 
       <div>
         <p className="text-2xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Make Barcode using Python</p>
@@ -39,7 +51,7 @@ const BarcodePage = () => {
         <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Using <code>ean13</code> Class</p>
         <p>This creates a barcode in SVG format. Write and run this code inside a directory:</p>
         <CodeHighlighter lang="python">
-{`import barcode
+          {`import barcode
 
 bar = barcode.get_barcode_class("ean13")
 Bar = bar("1234567890128")
@@ -59,7 +71,7 @@ Bar.save("make-barcode")`}
         <p className="text-xl text-purple-700 dark:text-purple-400 mb-2 font-semibold">Using <code>code39</code> Class</p>
         <p>This creates a barcode in PNG format. Run this code inside a directory:</p>
         <CodeHighlighter lang="python">
-{`import barcode
+          {`import barcode
 from barcode.writer import ImageWriter
 
 bar = barcode.get_barcode_class("code39")
@@ -72,6 +84,14 @@ Bar.save("make-barcodes")`}
           <p className="underline text-violet-700 dark:text-violet-400 font-semibold">make-barcodes.png</p>
         </div>
         <p>Scan this to get the encoded data.</p>
+      </div>
+
+      <div className="w-full border dark:border-white border-purple-700 my-5"></div>
+
+      <div className="w-full flex justify-start items-center p-3">
+        <Link href={`/learn/python-libraries/pyzbar`}><Button>
+          <ArrowLeft className='pr-1' /> pyzbar
+        </Button></Link>
       </div>
 
       <div className="w-full border dark:border-white border-purple-700 my-5"></div>
